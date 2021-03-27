@@ -87,13 +87,19 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/firmware_mnt:/firmware
 
-# decryption - see https://github.com/TeamWin/android_device_qcom_twrp-common
+# decryption
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
+
+# display
+TW_THEME := landscape_hdpi
+TW_ROTATION := 90
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
 
 # TWRP specific build flags
 BOARD_USES_QCOM_HARDWARE := true
@@ -106,10 +112,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TW_HAS_EDL_MODE := true
 TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_THEME := portrait_hdpi
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.0"
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS := 200
 TW_OVERRIDE_SYSTEM_PROPS := \ "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 
 
