@@ -19,13 +19,11 @@ ALLOW_MISSING_DEPENDENCIES := true
 PRODUCT_RELEASE_NAME := X505F
 
 # inherit the usual stuff...
-#$(call inherit-product, build/target/product/product_launched_with_p.mk)
 $(call inherit-product, build/target/product/aosp_base.mk)
-$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_X505F
-PRODUCT_DEVICE := X505F
+PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
+PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo TB-X505F
 PRODUCT_MANUFACTURER := LENOVO

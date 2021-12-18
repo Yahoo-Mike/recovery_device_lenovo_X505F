@@ -3,7 +3,7 @@
 ## Release info
 This is an unofficial build.  It decrypts data partition.  MTP working.  Install at your own risk.
 
-Build with TWRP for Android 10.0.
+Build with minimal AOSP TWRP for Android 11.0.
 
 ### About Device
 
@@ -34,7 +34,6 @@ To build:
 
 ```
 . build/envsetup.sh
-lunch omni_X505F-eng
-make clean 
+lunch twrp_X505F-eng
 mka recoveryimage
 ```
