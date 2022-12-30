@@ -4,7 +4,7 @@
 /boot            emmc              /dev/block/bootdevice/by-name/boot       flags=display="Boot"
 /recovery        emmc              /dev/block/bootdevice/by-name/recovery   flags=display="Recovery";backup=1
 
-/system          ext4              /dev/block/bootdevice/by-name/system     flags=backup=0
+/system          ext4              /dev/block/bootdevice/by-name/system     flags=backup=0;wipeingui
 /system_image    emmc              /dev/block/bootdevice/by-name/system     flags=display="System Image"
 /vendor          ext4              /dev/block/bootdevice/by-name/vendor     flags=wipeingui
 /vendor_image    emmc              /dev/block/bootdevice/by-name/vendor     flags=display="Vendor Image"
